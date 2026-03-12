@@ -42,7 +42,6 @@ public class EXAMPLE_DONOTUSE  : MonoBehaviour
 
 ## SceneLoader
 
-// TODO
 | Function     | Args | Return | Description |
 |--------------|------------------------------------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PreLoad()    | Scene scene \| string sceneName \| int buildIndex, float waitTime = 0f | SceneLoaderAsync | Preloads a scene to be used in LoadScene(), it updates several variables in SceneLoaderAsync, and can be used to make load screens, or see when load it, etc...  |
