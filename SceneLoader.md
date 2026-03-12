@@ -4,10 +4,39 @@
 
 ## Basic Usage
 
-1.
+1. Put SceneLoader.cs inside your project.
+2. Done!
 
-2.
-3.
+## Example
+
+```csharp
+using UnityEngine;
+using System.Collections;
+
+public class EXAMPLE_DONOTUSE  : MonoBehaviour
+{
+    SceneLoaderAsync sceneAsync;
+
+    void Start()
+    {
+        sceneAsync = SceneLoader.Preload("My Scene");
+        SceneLoader.Load(sceneAsync);
+        StartCoroutine(PrintHello());
+    }
+
+    IEnumerator PrintHello()
+    {
+        while(!sceneAsync.IsLoaded())
+        {    yield return null;
+        }
+
+        Debug.Log("Finished Loading!");
+        
+        yield break;
+    }
+}
+
+```
 
 ## SceneLoader
 
@@ -33,3 +62,4 @@
 | LoadProgress | 0f            | Load Progress for the current running async operation, ranges from 0 to 100f where 100f is complete.                                |
 | IsWaiting    | false         | Some operations may halt or be user set to halt, this tracks that, with true being a halting operation, false otherwise.            |
 | WaitTime     | 0f            | Time to wait before starting the operation, this is for whoever needs that for whatever reason.                                     |
+
