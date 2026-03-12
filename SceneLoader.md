@@ -1,6 +1,8 @@
 # Scene Loader V2
 
-[Insert Text Here]
+Unity Scene Loader Manager, you can preload, load, and unload scenes. 
+
+Tracks progress and load status using `SceneLoaderAsync`.
 
 ## Basic Usage
 
@@ -62,4 +64,5 @@ public class EXAMPLE_DONOTUSE  : MonoBehaviour
 | LoadProgress | 0f            | Load Progress for the current running async operation, ranges from 0 to 100f where 100f is complete.                                |
 | IsWaiting    | false         | Some operations may halt or be user set to halt, this tracks that, with true being a halting operation, false otherwise.            |
 | WaitTime     | 0f            | Time to wait before starting the operation, this is for whoever needs that for whatever reason.                                     |
+
 
